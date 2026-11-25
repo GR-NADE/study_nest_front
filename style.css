@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: #f4f6fb;
+  color: #1f2937;
+}
+
+.navbar {
+  background: #1e3a8a;
+  color: white;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+main {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+.message {
+  text-align: center;
+  color: #6b7280;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.toolbar {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.toolbar select {
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  font-size: 0.9rem;
+}
+
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.lesson-card {
+  position: relative;
+  overflow: hidden;
+  background: #111827;
+  color: white;
+  border-radius: 10px;
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+}
+
+.card-content {
+  position: relative;
+  min-height: 220px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.teacher {
+  margin: 0;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.availability {
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+.cart-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: #1e3a8a;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cart-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.cart-count {
+  background: #1e3a8a;
+  color: white;
+  border-radius: 999px;
+  min-width: 22px;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.add-button {
+  margin-top: 8px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #1e3a8a;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.add-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.add-button:disabled {
+  background: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #1e3a8a;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.cart-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 8px
+}
+
+.icon-button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background: #f3f4f6;
+}
+
+.icon-button.danger {
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.icon-button.danger:hover {
+  background: #fef2f2;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 320px;
+  margin-top: 24px;
+}
+
+.checkout-form input {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.confirmation {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: #dcfce7;
+  color: #166534;
+  border-radius: 10px;
+}
+
+.toolbar {
+  flex-wrap: wrap;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 240px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
